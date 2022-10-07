@@ -1,252 +1,240 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>all assignment</title>
+    <title>Document</title>
 </head>
 <style>
-    .container{
-    display: flex;
-    justify-content: center;
-}
-h1{
-    width: 50%;
-    margin-left: 25%;
-    border-radius: 10px;
-    color: rgb(13, 46, 72);
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    text-align: center;
-    background-color: rgb(109, 165, 221);
-    font-weight: bolder;
-}
-*{
-    background-color: rgb(248, 248, 248);
-}
-.btn-btn-primary{
-    font-weight: bolder !important;
-    
-}
-.col-md-4{
-    perspective: 1000px;
-}
-.card {
-    margin-top: 10px;
-    text-align: center;
-    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
-    transition: 1s linear;
-    border: 3px solid rgba(0,0,0,.125) !important ; 
-    border-radius: 7px !important;
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-    
-}
-.card-body{
-    padding: 1.5;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
 }
 
-.card{    
-    transition:all 1s ease-in-out;
-    transform-style:preserve-3d;
-  }
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+}
 
-  .card:hover {
-   
-    transform: rotateY(10deg);
-  }
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {		
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);		
+	position: relative;	
+	height: 600px;
+	width: 360px;	
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
 </style>
 <body>
-    <h1>"Different Projects Made By Zaid"<br>
-    <a href="https://github.com/zaidasim2197"class="btn btn-primary">Github</a>
-    <a href="https://www.linkedin.com/in/zaid-asim-49a751245/"class="btn btn-primary">Linkedin</a>
-    <a href="https://www.upwork.com/freelancers/~0165c6ff8f55add7de"class="btn btn-primary">Upwork</a>
-    <a href="https://www.facebook.com/zaid.asim.1238"class="btn btn-primary">Facebook</a></h1>
-
-    <hr>
     <div class="container">
-        <div class="row">
-
-            <!-- <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/reuterF.png" width="50px" height="180px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Reuters</h5>
-                        <p class="card-text">Make a copy of reuters page with the help of Html and css</p>
-                        <a href="./Reuters-page/index.html" target="_blank" class="btn btn-primary">Reuters</a>
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <h2 style="color:#7E7BB9 ; text-align: center;" ><u><b>Projects Made By Zaid</b></u></h2>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                       <h5><u> E-mail: </u></h5><input type="text" class="login__input" id="email" placeholder="admin@gmail.com">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                       <h5><u> Password: </u></h5><input type="password" class="login__input" id="pass" placeholder="admin123">
+                    </div>
+                    <button class="button login__submit" onclick="practice()">
+                      <span class="button__text">Log In Now </span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <div class="social-login">
+                    <h3>log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/Google sign-up.png" width="50px" height="180px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Google sign-up Design</h5>
-                        <p class="card-text">Create a Google Sign-up page with the help of Html and css</p>
-                        <a href="./google page/index.html" target="_blank" class="btn btn-primary">Google
-                            Sign-up</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/peronal website.jpg" width="50px" height="150px" class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Personal website</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="./website/index.html" target="_blank" class="btn btn-primary">Personal website</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/twitter login.jpg" width="50px" height="180px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Twitter-Login-page-Clon</h5>
-                        <p class="card-text">Make a Replica of twitter login page with Html ad Css as well as bootstrap</p>
-                        <a href="./Twitter-login/index.html" target="_blank" class="btn btn-primary">Twitter-Login</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/watsapp-web.webp"  width="50px" height="200px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">watsapp-web-Clon</h5>
-                        <p class="card-text">Ceeate a watsapp-web with the help of html css and bootstrap</p>
-                        <a href="./watsap-w/index.html" target="_blank" class="btn btn-primary">watsapp-web</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/FBf.png" width="15px" height="150px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Facebook clone</h5>
-                        <p class="card-text">Create a complete facebook clon with Html Css . click sign-up to go on to the login page and click on log-in to go to the facebook home page(In progress) </p>
-                        <a href="./Facebook-F/index.html" target="_blank" class="btn btn-primary">Facebook-Clon</a>
-                    </div>
-                </div>
-            </div> -->
-            <div class="col-md-4  ">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.clipartmax.com/png/middle/422-4223456_to-do-list-vector-todo-list-logos.png" width="50px" height="150px"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">To-Do List With Server</h5>
-                        <p class="card-text">Making To-Do List with the help of Nodejs, Expressjs, Cyclic API, Html and css</p>
-                        <a href="https://zaidasim2197.github.io/ToDo-List-Updated/" target="_blank"
-                            class="btn btn-primary">To-Do List</a> <br>
-                  
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4  ">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple91/v4/9e/5c/3a/9e5c3ac9-8f62-996c-1171-b25d0284579a/mzl.reftrddf.png/1200x630wa.png" width="50px" height="150px"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Azaan Timing Application</h5>
-                        <p class="card-text">Making Azaan Application with the help of Javascript, API, Html and css</p>
-                        <a href="https://zaidasim2197.github.io/Azaan-App/" target="_blank"
-                            class="btn btn-primary">Azaan Application</a> <br>
-                  
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4  ">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://cdn.worldvectorlogo.com/logos/weather-ios.svg" width="50px" height="150px"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Weather Forecast Application</h5>
-                        <p class="card-text">Making Weather Forecast App with the help of JS, API, Html and css</p>
-                        <a href="https://zaidasim2197.github.io/Weather-app-Final/" target="_blank"
-                            class="btn btn-primary">Weather Forecast App</a> <br>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./Assessts/Children-book-cover-page-1-CRC.png" width="50px" height="180px"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Children book</h5>
-                        <p class="card-text">Design and built a children book with the help of html and css</p>
-                        <a href="./Children book/index.html" target="_blank"
-                            class="btn btn-primary">Children's Book</a>
-                    </div>
-                </div>
-            </div> -->
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://img.favpng.com/12/23/3/basic-math-multiplication-table-the-times-tables-png-favpng-E6td80rZPiiRdgGD6xNcNNnki.jpg" width="50px" height="180px"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Basic Multiplication Table</h5>
-                        <p class="card-text">Made a Basic Multiplication Table using Html Css and JS</p>
-                        <a href="https://zaidasim2197.github.io/Multiplication-Table/"  target="_blank"class="btn btn-primary">Multiplication Table</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://atlas-content-cdn.pixelsquid.com/assets_v2/266/2666307001104995518/jpeg-600/G03.jpg?modifiedAt=1" width="50px" height="180px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Percentage Calculator</h5>
-                        <p class="card-text">Simple Percentage Calculator with the help of Html, Css and JS</p>
-                        <a href="https://zaidasim2197.github.io/Percentage-Cal/"
-                        target="_blank" class="btn btn-primary">Percentage Calculator</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://thumbs.dreamstime.com/b/basic-calculator-outline-vector-icon-thin-line-black-flat-simple-element-illustration-editable-technology-concept-isolated-179240620.jpg" width="50px" height="180px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Basic-JS-Calculator</h5>
-                        <p class="card-text">Create a Basic-JS-Calculator using Html, Css and JS</p>
-                        <a href="https://zaidasim2197.github.io/Basic-JS-Calculator-/" target="_blank" class="btn btn-primary">Basic JS Calculator</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.pngitem.com/pimgs/m/20-200740_resume-logo-png-transparent-png.png" width="50px" height="180px"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Zaid's Basic Resume</h5>
-                        <p class="card-text">Create an Zaid Basic Resume using HTML and CSS </p>
-                        <a href="https://zaidasim2197.github.io/Zaid-Resume-Flex/"
-                        target="_blank" class="btn btn-primary">Zaid Basic Resume</a>
-                    </div>
-                </div>
-
-            </div>
-
-
-
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
         </div>
-
-
-
     </div>
+    <script>
+        function practice(){
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("pass").value;
+            if(email == "admin@gmail.com"&& password== "admin123"){
+                alert("Login Successful");
+                window.open('practice.html', '_blank');
+        }
+            else{
+                alert("Login Unsuccessful")
+                return;
+            }
+        }
+    </script>
 </body>
-
 </html>
